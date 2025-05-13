@@ -19,7 +19,7 @@ export default function PokemonCard({ pokemon }) {
                 <div className="flex gap-1 flex-wrap justify-center">
                     {pokemon.types?.map((type) => (
 
-                        <div className="group relative rounded-full z-1">
+                        <div className="group relative rounded-full z-1" key={type.name}>
                             <Image
                                 key={type.name}
                                 src={type.image}
@@ -37,8 +37,6 @@ export default function PokemonCard({ pokemon }) {
                             ></div>
                             </div>
                         </div>
-
-                        
                     ))}
                 </div>
             </div>

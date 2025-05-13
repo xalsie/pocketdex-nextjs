@@ -22,14 +22,12 @@ export default function PokemonListPage() {
         fetchTypes().then(setTypes);
     }, []);
 
-    // Reset pokemons/page/hasMore à chaque changement de filtre (name/types/limit)
     useEffect(() => {
         setPokemons([]);
         setPage(1);
         setHasMore(true);
     }, [filters.name, filters.types, filters.limit]);
 
-    // Fetch pokémons à chaque changement de page OU de filtre
     useEffect(() => {
         if (!mounted) return;
         if (loading) return;

@@ -38,13 +38,12 @@ export default async function PokemonDetailPage({ params }) {
                 </div>
             </div>
 
-            {/* si pas d'evolution hide block */}
             {pokemon.evolutions?.length === 0 && (
                 <div className="bg-gray-700 flex flex-col items-center justify-center p-4 rounded-lg shadow">
                     <h2 className="font-semibold">Pas d'évolutions</h2>
                 </div>
             )}
-            {/* si evolutions */}
+
             {pokemon.evolutions?.length > 0 && (
                 <div className="bg-gray-700 flex flex-col items-center justify-center p-4 rounded-lg shadow">
                     <h2 className="font-semibold">Évolutions</h2>
